@@ -34,3 +34,17 @@ print(data["temp"].max())
 # get data in columns
 #print(data["condition"])
 print(data.condition)
+
+# get data in row
+print(data[data.day == "Monday"])
+print(data[data.temp == data.temp.max()])
+
+# create dataframe from Scratch
+
+data_dict={
+    "students":["Amy","Sam","Justin"],
+    "marks":[76,55,87]
+}
+data = pandas.DataFrame(data_dict)
+data.to_csv("new_data.csv")
+
